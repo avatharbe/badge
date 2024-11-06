@@ -39,13 +39,21 @@ $lang = array_merge(
 	$lang, array(
 		'BBCODE_BADGE_HELP'			=> '[badge]SUBJECT-STATUS-COLOR[/badge]',
 		'BADGE_BBCODES'				=> 'Badge bbCode',
-		'CHANGELOG'					=> 'changelog-v1.0.0',
+		'CHANGELOG'					=> 'changelog-v1.0.0-a808f3',
 		'CHANGELOG_TITLE'			=> 'Changelog',
 		'CUSTOM'					=> 'SUBJECT-STATUS-COLOR',
 		'CUSTOM_TITLE'				=> 'Custom',
 		'LICENSE'					=> 'license-GPLv2-blue',
 		'LICENSE_TITLE'				=> 'License GPLv2',
-		'VERSION_100'				=> 'version-1.0.0',
+		'VERSION_100'				=> 'version-1.0.0-FFFF00',
 		'VERSION_100_TITLE'			=> 'Version 1.0.0',
+		'VERSION_101'				=> 'version-1.0.1-f36808',
+		'VERSION_101_TITLE'			=> 'Version 1.0.1',
+		'VERSION_200'				=> 'version-2.0.0-ff5733',
+		'VERSION_200_TITLE'			=> 'Version 2.0.0',
+		'VERSION_300'				=> 'version-3.0.0-ff5733',
+		'VERSION_300_TITLE'			=> 'Version 3.0.0',
+		'VERSION_400'				=> 'version-4.0.0-ff5733',
+		'VERSION_400_TITLE'			=> 'Version 4.0.0',	
 	)
 );

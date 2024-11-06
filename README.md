@@ -15,18 +15,10 @@ Can also make a Custom badge use SUBJECT-STATUS-COLOR within the [badge][/badge]
 4. Copy the `badge` folder to `/ext/avathar/` (if done correctly, you'll have the main extension class at (your forum root)/ext/avathar/badge/composer.json).
 5. Navigate in the ACP to `Customise -> Manage extensions`.
 6. Look for `Badge Extension` under the Disabled Extensions list, and click its `Enable` link.
-7. add new bbcode with usage 
-``` [badge]{INTTEXT1}-{INTTEXT2}-{INTTEXT3}[/badge] ``` 
-8. define the default HTML replacement as : 
-``` 
-<img src="https://img.shields.io/badge/{INTTEXT1}-{INTTEXT2}-{INTTEXT3}.svg" alt="" style="margin-bottom: -5px;" />
-```
-9. add a help line with 
-``` 
-[badge]SUBJECT-STATUS-COLOR[/badge]
-``` 
-10. check the checkbox "display on posting page"
-
+7. look in the bbcode ACP and you will see a new bbcode with ` [badge]{INTTEXT1}-{INTTEXT2}-{INTTEXT3}[/badge] ` 
+  HTML replacement as :  ``` 
+<img src="https://img.shields.io/badge/{INTTEXT1}-{INTTEXT2}-{INTTEXT3}.svg" alt="" style="margin-bottom: -5px;" /> ```
+ and help line with `[badge]SUBJECT-STATUS-COLOR[/badge] ` 
 
 ## Uninstall
 
