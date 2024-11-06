@@ -1,0 +1,5 @@
+services:
+    avathar.badge.listener:
+        class: avathar\badge\event\listener
+        tags:
+            - { name: event.listener }
