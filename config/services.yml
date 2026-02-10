@@ -1,5 +1,7 @@
 services:
     avathar.badge.listener:
         class: avathar\badge\event\listener
+        arguments:
+            - '%core.root_path%ext/avathar/badge/'
         tags:
             - { name: event.listener }

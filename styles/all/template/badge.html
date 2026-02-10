@@ -1,11 +1,6 @@
 <select class="bbcode-badge" name="badge" onchange="bbfontstyle('[badge]' + this.options[this.selectedIndex].value + '', '[/badge]');this.selectedIndex = 0;" title="{L_BBCODE_BADGE_HELP}" style="height: 21px;">
-		<option value="#" selected="selected" style="display: none;">{L_BADGE_BBCODES}</option>
-		<option value="{L_CHANGELOG}">{L_CHANGELOG_TITLE}</option>
-		<option value="{L_CUSTOM}">{L_CUSTOM_TITLE}</option>
-		<option value="{L_LICENSE}">{L_LICENSE_TITLE}</option>
-		<option value="{L_VERSION_100}">{L_VERSION_100_TITLE}</option>
-		<option value="{L_VERSION_101}">{L_VERSION_102_TITLE}</option>
-		<option value="{L_VERSION_200}">{L_VERSION_200_TITLE}</option>
-		<option value="{L_VERSION_300}">{L_VERSION_300_TITLE}</option>
-		<option value="{L_VERSION_400}">{L_VERSION_400_TITLE}</option>
+	<option value="#" selected="selected" style="display: none;">{L_BADGE_BBCODES}</option>
+	<!-- BEGIN badge_presets -->
+	<option value="{badge_presets.value}">{badge_presets.title}</option>
+	<!-- END badge_presets -->
 </select>
