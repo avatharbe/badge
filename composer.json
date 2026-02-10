@@ -1,10 +1,10 @@
 {
 	"name": "avathar/badge",
 	"type": "phpbb-extension",
-	"description": "This extension will add a badge bbCode selection box in posting template.",
+	"description": "Adds shields.io badge support to phpBB posts via a BBCode dropdown with configurable presets.",
 	"homepage": "https://www.avathar.be",
 	"version": "1.1.0",
-	"time": "2024-11-06",
+	"time": "2026-02-10",
 	"keywords": ["phpbb", "extension", "Badge Extension"],
 	"license": "GPL-2.0",
 	"authors": [
