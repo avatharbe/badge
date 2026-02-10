@@ -6,6 +6,11 @@
 *
 */
 
+if (!defined('IN_PHPBB'))
+{
+	exit;
+}
+
 return [
 	['key' => 'changelog', 'value' => 'changelog-v1.0.0-a808f3', 'title' => 'Changelog'],
 	['key' => 'custom',    'value' => 'SUBJECT-STATUS-COLOR',     'title' => 'Custom'],
