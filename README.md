@@ -1,11 +1,15 @@
 # Badge Extension
 
-## Version 
-1.0.0
+## Version
+1.1.0
 
-## Extension Description:
-This extension will add a badge bbCode selection box in posting template.
-Can also make a Custom badge use SUBJECT-STATUS-COLOR within the [badge][/badge] tags and adjust to whatever you want.
+## Description
+
+This extension adds concise, consistent, and legible badges to your forum posts using [shields.io](https://shields.io/). A dropdown in the posting editor lets you pick from a set of common badge presets, or you can create your own by specifying a custom `SUBJECT-STATUS-COLOR` value inside the `[badge][/badge]` BBCode tags.
+
+Badge presets are defined in `config/badge_presets.php`. To add, remove, or edit a preset, simply edit that file — no other files need to be changed.
+
+
 
 ## Install
 
@@ -15,10 +19,22 @@ Can also make a Custom badge use SUBJECT-STATUS-COLOR within the [badge][/badge]
 4. Copy the `badge` folder to `/ext/avathar/` (if done correctly, you'll have the main extension class at (your forum root)/ext/avathar/badge/composer.json).
 5. Navigate in the ACP to `Customise -> Manage extensions`.
 6. Look for `Badge Extension` under the Disabled Extensions list, and click its `Enable` link.
-7. look in the bbcode ACP and you will see a new bbcode with ` [badge]{INTTEXT1}-{INTTEXT2}-{INTTEXT3}[/badge] ` 
-  HTML replacement as :  ``` 
-<img src="https://img.shields.io/badge/{INTTEXT1}-{INTTEXT2}-{INTTEXT3}.svg" alt="" style="margin-bottom: -5px;" /> ```
- and help line with `[badge]SUBJECT-STATUS-COLOR[/badge] ` 
+7. Look in the bbcode ACP and you will see a new bbcode with `[badge]{INTTEXT1}-{INTTEXT2}-{INTTEXT3}[/badge]`
+   HTML replacement as:
+   ```
+   <img src="https://img.shields.io/badge/{INTTEXT1}-{INTTEXT2}-{INTTEXT3}.svg" alt="" style="margin-bottom: -5px;" />
+   ```
+   and help line with `[badge]SUBJECT-STATUS-COLOR[/badge]`
+
+## Adding or Editing Badge Presets
+
+Edit `config/badge_presets.php` and add a new entry to the array:
+
+```php
+['key' => 'mypreset', 'value' => 'build-passing-brightgreen', 'title' => 'Build Passing'],
+```
+
+Purge the board cache afterwards. The new preset will appear in the posting editor dropdown automatically.
 
 ## Uninstall
 

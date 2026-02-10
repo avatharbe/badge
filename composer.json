@@ -3,7 +3,7 @@
 	"type": "phpbb-extension",
 	"description": "This extension will add a badge bbCode selection box in posting template.",
 	"homepage": "https://www.avathar.be",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"time": "2024-11-06",
 	"keywords": ["phpbb", "extension", "Badge Extension"],
 	"license": "GPL-2.0",
