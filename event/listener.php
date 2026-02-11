@@ -21,14 +21,19 @@ class listener implements EventSubscriberInterface
 	/** @var string */
 	protected $ext_path;
 
+	/** @var \phpbb\template\template */
+	protected $template;
+
 	/**
 	* Constructor
 	*
 	* @param string $ext_path Path to this extension's directory
+	* @param \phpbb\template\template $template
 	*/
-	public function __construct($ext_path)
+	public function __construct($ext_path, \phpbb\template\template $template)
 	{
 		$this->ext_path = $ext_path;
+		$this->template = $template;
 	}
 
 	static public function getSubscribedEvents()
@@ -59,8 +64,12 @@ class listener implements EventSubscriberInterface
 			$presets = include $presets_file;
 		}
 
-		$page_data = $event['page_data'];
-		$page_data['badge_presets'] = $presets;
-		$event['page_data'] = $page_data;
+		foreach ($presets as $preset)
+		{
+			$this->template->assign_block_vars('badge_presets', array(
+				'value'	=> $preset['value'],
+				'title'	=> $preset['title'],
+			));
+		}
 	}
 }

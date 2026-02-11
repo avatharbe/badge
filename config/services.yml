@@ -3,5 +3,6 @@ services:
         class: avathar\badge\event\listener
         arguments:
             - '%core.root_path%ext/avathar/badge/'
+            - '@template'
         tags:
             - { name: event.listener }
