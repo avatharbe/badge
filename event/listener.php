@@ -21,6 +21,9 @@ class listener implements EventSubscriberInterface
 	/** @var string */
 	protected $ext_path;
 
+	/** @var \phpbb\language\language */
+	protected $language;
+
 	/** @var \phpbb\template\template */
 	protected $template;
 
@@ -28,11 +31,13 @@ class listener implements EventSubscriberInterface
 	* Constructor
 	*
 	* @param string $ext_path Path to this extension's directory
+	* @param \phpbb\language\language $language
 	* @param \phpbb\template\template $template
 	*/
-	public function __construct($ext_path, \phpbb\template\template $template)
+	public function __construct($ext_path, \phpbb\language\language $language, \phpbb\template\template $template)
 	{
 		$this->ext_path = $ext_path;
+		$this->language = $language;
 		$this->template = $template;
 	}
 
@@ -68,7 +73,7 @@ class listener implements EventSubscriberInterface
 		{
 			$this->template->assign_block_vars('badge_presets', array(
 				'value'	=> $preset['value'],
-				'title'	=> $preset['title'],
+				'title'	=> $this->language->lang($preset['lang_key']),
 			));
 		}
 	}

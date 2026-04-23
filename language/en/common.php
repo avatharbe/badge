@@ -39,5 +39,17 @@ $lang = array_merge(
 	$lang, array(
 		'BBCODE_BADGE_HELP'			=> '[badge]SUBJECT-STATUS-COLOR[/badge]',
 		'BADGE_BBCODES'				=> 'Badge bbCode',
+		'BADGE_PRESET_CHANGELOG'	=> 'Changelog',
+		'BADGE_PRESET_CUSTOM'		=> 'Custom',
+		'BADGE_PRESET_LICENSE'		=> 'License GPLv2',
+		'BADGE_PRESET_V100'			=> 'Version 1.0.0',
+		'BADGE_PRESET_V101'			=> 'Version 1.0.1',
+		'BADGE_PRESET_V200'			=> 'Version 2.0.0',
+		'BADGE_PRESET_V300'			=> 'Version 3.0.0',
+		'BADGE_PRESET_V400'			=> 'Version 4.0.0',
+		'BADGE_PRESET_PHPBB33'		=> 'phpBB 3.3',
+		'BADGE_PRESET_STABLE'		=> 'Stable',
+		'BADGE_PRESET_BETA'			=> 'Beta',
+		'BADGE_PRESET_BUILD'		=> 'Build Passing',
 	)
 );

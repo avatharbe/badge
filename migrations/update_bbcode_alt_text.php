@@ -25,8 +25,8 @@ class update_bbcode_alt_text extends \phpbb\db\migration\migration
 	public function update_badge_bbcode_template()
 	{
 		$sql = 'SELECT bbcode_id
-			FROM ' . BBCODES_TABLE . "
-			WHERE LOWER(bbcode_tag) = 'badge='";
+			FROM ' . BBCODES_TABLE . '
+			WHERE ' . $this->db->sql_in_set('LOWER(bbcode_tag)', array('badge=', 'badge'));
 		$result = $this->db->sql_query($sql);
 		$row = $this->db->sql_fetchrow($result);
 		$this->db->sql_freeresult($result);

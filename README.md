@@ -1,14 +1,13 @@
 # Badge Extension
 
 ## Version
-1.1.0
+1.1.1
 
 ## Description
 
 This extension adds concise, consistent, and legible badges to your forum posts using [shields.io](https://shields.io/). A dropdown in the posting editor lets you pick from a set of common badge presets, or you can create your own by specifying a custom `SUBJECT-STATUS-COLOR` value inside the `[badge][/badge]` BBCode tags.
 
-Badge presets are defined in `config/badge_presets.php`. To add, remove, or edit a preset, simply edit that file — no other files need to be changed.
-
+Badge presets are defined in `config/badge_presets.php`, with display labels provided via language keys in `language/en/common.php`.
 
 
 ## Install
@@ -26,15 +25,40 @@ Badge presets are defined in `config/badge_presets.php`. To add, remove, or edit
    ```
    and help line with `[badge]SUBJECT-STATUS-COLOR[/badge]`
 
+## Built-in Presets
+
+| Preset | Badge Value | Description |
+|--------|-------------|-------------|
+| changelog | `changelog-v1.0.0-a808f3` | Changelog |
+| custom | `SUBJECT-STATUS-COLOR` | Custom |
+| license | `license-GPLv2-blue` | License GPLv2 |
+| v100 | `version-1.0.0-FFFF00` | Version 1.0.0 |
+| v101 | `version-1.0.1-f36808` | Version 1.0.1 |
+| v200 | `version-2.0.0-ff5733` | Version 2.0.0 |
+| v300 | `version-3.0.0-ff5733` | Version 3.0.0 |
+| v400 | `version-4.0.0-ff5733` | Version 4.0.0 |
+| phpbb33 | `phpBB-3.3-blue` | phpBB 3.3 |
+| stable | `stable-yes-brightgreen` | Stable |
+| beta | `status-beta-yellow` | Beta |
+| build | `build-passing-brightgreen` | Build Passing |
+
 ## Adding or Editing Badge Presets
 
-Edit `config/badge_presets.php` and add a new entry to the array:
+1. Edit `config/badge_presets.php` and add a new entry to the array:
 
-```php
-['key' => 'mypreset', 'value' => 'build-passing-brightgreen', 'title' => 'Build Passing'],
-```
+   ```php
+   ['key' => 'mypreset', 'value' => 'build-passing-brightgreen', 'lang_key' => 'BADGE_PRESET_MYPRESET'],
+   ```
 
-Purge the board cache afterwards. The new preset will appear in the posting editor dropdown automatically.
+   The `value` follows the shields.io format `SUBJECT-STATUS-COLOR`, where `COLOR` is a named color (e.g. `blue`, `brightgreen`) or a hex code without the `#` (e.g. `ff5733`).
+
+2. Add the matching language key to `language/en/common.php`:
+
+   ```php
+   'BADGE_PRESET_MYPRESET' => 'Build Passing',
+   ```
+
+3. Purge the board cache. The new preset will appear in the posting editor dropdown automatically.
 
 ## Uninstall
 

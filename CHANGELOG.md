@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.1.1 - 2026-04-23
+
+### Fixed
+- Preset titles are now resolved via language keys instead of hard-coded strings
+- Migration bbcode_tag lookup now matches both `badge=` and `badge` variants
+
+### Changed
+- Preset config uses `lang_key` references instead of `title` strings
+- Added `@language` service injection to event listener
+
 ## 1.1.0 - 2026-02-10
 
 ### Changed

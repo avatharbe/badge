@@ -3,8 +3,8 @@
 	"type": "phpbb-extension",
 	"description": "Adds shields.io badge support to phpBB posts via a BBCode dropdown with configurable presets.",
 	"homepage": "https://www.avathar.be",
-	"version": "1.1.0",
-	"time": "2026-02-10",
+	"version": "1.1.1",
+	"time": "2026-04-23",
 	"keywords": ["phpbb", "extension", "Badge Extension"],
 	"license": "GPL-2.0-only",
 	"authors": [
