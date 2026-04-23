@@ -6,6 +6,10 @@
 - Preset titles are now resolved via language keys instead of hard-coded strings
 - Migration bbcode_tag lookup now matches both `badge=` and `badge` variants
 
+### Added
+- New presets: phpBB 3.3 compatibility, Stable, Beta, Build Passing
+- `.gitignore` file
+
 ### Changed
 - Preset config uses `lang_key` references instead of `title` strings
 - Added `@language` service injection to event listener
